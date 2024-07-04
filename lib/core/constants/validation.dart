@@ -1,5 +1,5 @@
 abstract class Validation {
-  String? validateEmail(String? value) {
+  static String? validateEmail(String? value) {
     if (value == null || value.isEmpty) {
       return 'Please enter your email';
     }
@@ -12,7 +12,7 @@ abstract class Validation {
     return null;
   }
 
-  String? validatePassword(String? value) {
+  static String? validatePassword(String? value) {
     if (value == null || value.isEmpty) {
       return 'Please enter your password';
     }
