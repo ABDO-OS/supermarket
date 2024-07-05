@@ -40,10 +40,15 @@ abstract class TextStylesApp {
   // Style for text with 14sp size
   static TextStyle textStyleRegular14 = TextStyle(
     color: ColorApp.primary,
-    fontSize: 14,
+    fontSize: 14.sp,
     fontFamily: Fonts.gilroy,
     fontWeight: FontWeight.w400,
-    letterSpacing: 0.70,
   );
-  
+  // Style for text with 45sp size
+  static TextStyle textStyleRegular48 = TextStyle(
+    color: Colors.white,
+    fontSize: 45.sp,
+    fontFamily: 'Gilroy',
+    fontWeight: FontWeight.w600,
+  );
 }

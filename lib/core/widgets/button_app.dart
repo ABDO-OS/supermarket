@@ -18,11 +18,11 @@ class ButtonApp extends StatelessWidget {
         onPressed: onPressed,
         style: ButtonStyle(
           backgroundColor:
-              MaterialStateProperty.all<Color>(ColorApp.colorButton),
-          minimumSize: MaterialStateProperty.all<Size>(
+              WidgetStateProperty.all<Color>(ColorApp.colorButton),
+          minimumSize: WidgetStateProperty.all<Size>(
             Size(double.infinity, 50.h),
           ),
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          shape: WidgetStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(
                 19.r, // Rounded corners
