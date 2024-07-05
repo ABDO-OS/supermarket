@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:supermarket/feature/get_started/ui/get_started.dart';
+import 'package:supermarket/feature/home/ui/home_screen.dart';
 import 'package:supermarket/feature/login/ui/login_screen.dart';
 
 void main() {
@@ -15,7 +17,6 @@ class MyApp extends StatelessWidget {
         designSize: const Size(360, 690),
         minTextAdapt: true,
         splitScreenMode: true,
-        // Use builder only if you need to use library outside ScreenUtilInit context
         builder: (_, child) {
           return MaterialApp(
             title: 'Flutter Demo',
@@ -25,7 +26,6 @@ class MyApp extends StatelessWidget {
               useMaterial3: true,
             ),
             home: const LoginScreen(),
-            
           );
         });
   }
