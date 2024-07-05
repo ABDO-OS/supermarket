@@ -1,60 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:supermarket/core/theme/colors.dart';
 import 'package:supermarket/core/theme/styles.dart';
-import 'package:supermarket/feature/sign%20up/sign_up.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignUp extends StatelessWidget {
+  const SignUp({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SafeArea(
-      child: Padding(
-        padding: EdgeInsets.all(25.r),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Center(child: SvgPicture.asset('assets/images/carrot.svg')),
-              SizedBox(height: 100.h),
-              Text(
-                'Login',
-                textAlign: TextAlign.center,
-                style: TextStylesApp.textStyleSemi26,
-              ),
-              SizedBox(height: 15.h),
-              Text(
-                'Enter your emails and password',
-                textAlign: TextAlign.center,
-                style: TextStylesApp.textStyleMedium16,
-              ),
-              SizedBox(height: 35.h),
-              const WidgetTextFromField(),
-              SizedBox(height: 8.h),
-              Align(
-                alignment: Alignment.centerRight,
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => SignUp(),
-                        ));
-                  },
-                  child: Text(
-                    'Forgot Password?',
-                    style: TextStylesApp.textStyleMedium14,
-                  ),
-                ),
-              ),
-            ],
-          ),
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Image.asset('assets/images/carrot.svg'),
+            Text(
+              'Sign Up',
+              textAlign: TextAlign.center,
+              style: TextStylesApp.textStyleSemi26,
+            ),
+            SizedBox(height: 15.h),
+            Text(
+              'Enter your credentials to continue',
+              textAlign: TextAlign.center,
+              style: TextStylesApp.textStyleMedium16,
+            ),
+          ],
         ),
       ),
-    ));
+    );
   }
 }
 
@@ -103,11 +77,16 @@ class WidgetTextFromField extends StatefulWidget {
 class _WidgetTextFromFieldState extends State<WidgetTextFromField> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  TextEditingController usernameController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
+        CustomTextFormField(
+          controller: usernameController,
+          labelText: 'Username',
+        ),
         CustomTextFormField(
           controller: emailController,
           labelText: 'Email',
