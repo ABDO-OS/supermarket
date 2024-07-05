@@ -51,4 +51,11 @@ abstract class TextStylesApp {
     fontFamily: 'Gilroy',
     fontWeight: FontWeight.w600,
   );
+  // Style for text with 12sp size
+  static TextStyle textStyleSemi12 = TextStyle(
+    color: ColorApp.primary,
+    fontSize: 11.sp,
+    fontFamily: 'Gilroy',
+    fontWeight: FontWeight.w600,
+  );
 }
