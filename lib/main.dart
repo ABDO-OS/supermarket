@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:supermarket/feature/get_started/ui/get_started.dart';
 import 'package:supermarket/feature/login/ui/login_screen.dart';
 
 void main() {
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ),
-            home: const LoginScreen(),
+            home: const GetStarted(),
           );
         });
   }
