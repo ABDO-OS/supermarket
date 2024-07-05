@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:supermarket/core/constants/go_router.dart';
 import 'package:supermarket/feature/get_started/ui/get_started.dart';
 import 'package:supermarket/feature/home/ui/home_screen.dart';
 import 'package:supermarket/feature/login/ui/login_screen.dart';
@@ -19,14 +20,14 @@ class MyApp extends StatelessWidget {
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (_, child) {
-          return MaterialApp(
+          return MaterialApp.router(
             title: 'Flutter Demo',
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ),
-            home: const SignUp(),
+            routerConfig: Routers.router,
           );
         });
   }
