@@ -44,3 +44,4 @@ app.*.map.json
 
 # Gradle wrapper properties file
 /gradle/wrapper/gradle-wrapper.properties
+android/gradle/wrapper/gradle-wrapper.properties
