@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:supermarket/core/theme/colors.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:supermarket/core/constants/assets.dart';
 import 'package:supermarket/core/theme/styles.dart';
+import 'package:supermarket/core/widgets/custom_text_form_field.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
@@ -13,7 +15,10 @@ class SignUp extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset('assets/images/carrot.svg'),
+            // Image.asset('assets/images/carrot.svg'),
+            // SVG صورة بتكون بجودة عالية بنستخمد باكدج عشان نستخدمها 
+            SvgPicture.asset(Assets.imagesCarrot),
+            
             Text(
               'Sign Up',
               textAlign: TextAlign.center,
@@ -23,46 +28,11 @@ class SignUp extends StatelessWidget {
             Text(
               'Enter your credentials to continue',
               textAlign: TextAlign.center,
-              style: TextStylesApp.textStyleMedium16,
+              style: TextStylesApp.textStyleRegular18,
             ),
           ],
         ),
       ),
-    );
-  }
-}
-
-class CustomTextFormField extends StatelessWidget {
-  final TextEditingController controller;
-  final String? labelText;
-  const CustomTextFormField({
-    super.key,
-    required this.controller,
-    this.labelText,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return TextFormField(
-      controller: controller,
-      style: TextStylesApp.textStyleMedium18,
-      cursorColor: ColorApp.secondary,
-      keyboardType: TextInputType.emailAddress,
-      decoration: InputDecoration(
-          labelText: labelText,
-          labelStyle: TextStylesApp.textStyleSemi16,
-          suffixIcon: labelText == 'Password'
-              ? IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.visibility,
-                    color: ColorApp.secondary,
-                  ),
-                )
-              : null,
-          focusedBorder: UnderlineInputBorder(
-            borderSide: BorderSide(color: ColorApp.secondary),
-          )),
     );
   }
 }
