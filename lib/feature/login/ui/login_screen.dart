@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
+import 'package:supermarket/core/constants/assets.dart';
+import 'package:supermarket/core/constants/go_router.dart';
 import 'package:supermarket/core/theme/styles.dart';
+import 'package:supermarket/core/widgets/button_app.dart';
+import 'package:supermarket/core/widgets/text_rich.dart';
 import 'package:supermarket/feature/login/ui/widgets/widget_text_from_field.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -16,7 +21,7 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(child: SvgPicture.asset('assets/images/carrot.svg')),
+              Center(child: SvgPicture.asset(Assets.imagesCarrot)),
               SizedBox(height: 100.h),
               Text(
                 'Login',
@@ -31,7 +36,7 @@ class LoginScreen extends StatelessWidget {
               ),
               SizedBox(height: 35.h),
               const WidgetTextFromField(),
-              SizedBox(height: 8.h),
+              SizedBox(height: 5.h),
               Align(
                 alignment: Alignment.centerRight,
                 child: TextButton(
@@ -41,6 +46,21 @@ class LoginScreen extends StatelessWidget {
                     style: TextStylesApp.textStyleRegular14,
                   ),
                 ),
+              ),
+              SizedBox(height: 20.h),
+              ButtonApp(
+                  text: 'Login',
+                  onPressed: () {
+                    GoRouter.of(context).push(Routers.home);
+                  }),
+              SizedBox(height: 20.h),
+              Center(
+                child: TextRich(
+                    onTap: () {
+                      GoRouter.of(context).push(Routers.signUp);
+                    },
+                    text1: 'Don’t have an account?',
+                    text2: ' Sign up'),
               )
             ],
           ),
