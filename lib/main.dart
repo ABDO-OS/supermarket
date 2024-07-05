@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:supermarket/core/constants/go_router.dart';
-import 'package:supermarket/feature/get_started/ui/get_started.dart';
-import 'package:supermarket/feature/home/ui/home_screen.dart';
-import 'package:supermarket/feature/login/ui/login_screen.dart';
-import 'package:supermarket/feature/sign%20up/sign_up.dart';
 
 void main() {
   runApp(const MyApp());
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarColor: Colors.white, // Set the status bar color to white
+    statusBarIconBrightness: Brightness.dark, // Set the icon brightness to dark
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -21,10 +22,10 @@ class MyApp extends StatelessWidget {
         splitScreenMode: true,
         builder: (_, child) {
           return MaterialApp.router(
-            title: 'Flutter Demo',
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+              colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
+              scaffoldBackgroundColor: Colors.white,
               useMaterial3: true,
             ),
             routerConfig: Routers.router,

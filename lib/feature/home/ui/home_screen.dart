@@ -57,14 +57,15 @@ class _HomeScreenState extends State<HomeScreen> {
       buildItemNavBar(title: 'Account', icon: Icons.person_3_outlined),
     ];
   }
-  /// Builds a [PersistentBottomNavBarItem] with the specified [icon], [title], and [image].  
+
+  /// Builds a [PersistentBottomNavBarItem] with the specified [icon], [title], and [image].
   /// Returns a [PersistentBottomNavBarItem] with the specified properties.
   PersistentBottomNavBarItem buildItemNavBar(
       {required IconData icon, required String? title, String? image}) {
     return PersistentBottomNavBarItem(
         icon: Icon(icon),
         title: (title),
-        textStyle: TextStylesApp.textStyleSemi12,
+        textStyle: TextStylesApp.textStyleSemi11,
         activeColorPrimary: ColorApp.colorButton,
         inactiveColorPrimary: ColorApp.primary);
   }

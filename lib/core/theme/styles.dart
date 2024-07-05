@@ -48,14 +48,31 @@ abstract class TextStylesApp {
   static TextStyle textStyleRegular48 = TextStyle(
     color: Colors.white,
     fontSize: 45.sp,
-    fontFamily: 'Gilroy',
+    fontFamily: Fonts.gilroy,
     fontWeight: FontWeight.w600,
   );
-  // Style for text with 12sp size
-  static TextStyle textStyleSemi12 = TextStyle(
+  // Style for text with 11sp size
+  static TextStyle textStyleSemi11 = TextStyle(
     color: ColorApp.primary,
     fontSize: 11.sp,
-    fontFamily: 'Gilroy',
+    fontFamily: Fonts.gilroy,
     fontWeight: FontWeight.w600,
+  );
+
+  // Style for text with 22sp size
+  static TextStyle textStyleSemi22 = TextStyle(
+    color: ColorApp.primary,
+    fontSize: 22.sp,
+    fontFamily: Fonts.gilroy,
+    fontWeight: FontWeight.w600,
+    height: 0,
+  );
+  // Style for text with 20sp size
+  static TextStyle textStyleSemi20 = TextStyle(
+    color: ColorApp.colorGroceries,
+    fontSize: 20.sp,
+    fontFamily: Fonts.gilroy,
+    fontWeight: FontWeight.w600,
+    height: 0,
   );
 }
