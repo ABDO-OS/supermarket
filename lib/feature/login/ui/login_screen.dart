@@ -7,6 +7,7 @@ import 'package:supermarket/core/constants/go_router.dart';
 import 'package:supermarket/core/theme/styles.dart';
 import 'package:supermarket/core/widgets/button_app.dart';
 import 'package:supermarket/core/widgets/text_rich.dart';
+import 'package:supermarket/feature/login/ui/widgets/or_login.dart';
 import 'package:supermarket/feature/login/ui/widgets/widget_text_from_field.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -63,7 +64,16 @@ class LoginScreen extends StatelessWidget {
                     },
                     text1: 'Don’t have an account?',
                     text2: ' Sign up'),
-              )
+              ),
+              SizedBox(height: 15.h),
+              const OrLogin(),
+              SizedBox(height: 10.h),
+              Center(
+                child: IconButton(
+                    onPressed: () {},
+                    icon: const ImageIcon(AssetImage(Assets.imagesGoogle))),
+              ),
+              SizedBox(height: 15.h),
             ],
           ),
         ),
