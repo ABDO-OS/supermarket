@@ -40,7 +40,9 @@ class LoginScreen extends StatelessWidget {
               Align(
                 alignment: Alignment.centerRight,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    GoRouter.of(context).push(Routers.forgotPassword);
+                  },
                   child: Text(
                     'Forgot Password?',
                     style: TextStylesApp.textStyleRegular14,
