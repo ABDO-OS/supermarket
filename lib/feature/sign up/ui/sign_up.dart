@@ -7,9 +7,9 @@ import 'package:supermarket/core/constants/go_router.dart';
 import 'package:supermarket/core/theme/colors.dart';
 import 'package:supermarket/core/theme/styles.dart';
 import 'package:supermarket/core/widgets/button_app.dart';
-import 'package:supermarket/core/widgets/custom_text_form_field.dart';
 import 'package:supermarket/core/widgets/text_rich.dart';
 import 'package:supermarket/feature/login/ui/widgets/widget_text_from_field.dart';
+import 'package:supermarket/feature/sign%20up/ui/widgets/have_account.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
@@ -62,14 +62,7 @@ class SignUp extends StatelessWidget {
                 SizedBox(
                   height: 20.h,
                 ),
-                Center(
-                    child: TextRich(
-                  text1: 'Already have an account? ',
-                  text2: 'Login',
-                  onTap: () {
-                    GoRouter.of(context).push(Routers.login);
-                  },
-                ))
+                const HaveAccount()
               ],
             ),
           ),
@@ -78,4 +71,3 @@ class SignUp extends StatelessWidget {
     );
   }
 }
-

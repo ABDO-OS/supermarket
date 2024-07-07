@@ -71,7 +71,7 @@ class LoginScreen extends StatelessWidget {
               Center(
                 child: IconButton(
                     onPressed: () {},
-                    icon: const ImageIcon(AssetImage(Assets.imagesGoogle))),
+                    icon: Image.asset(width: 40.w, Assets.imagesGoogle)),
               ),
               SizedBox(height: 15.h),
             ],
