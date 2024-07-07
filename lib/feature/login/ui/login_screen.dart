@@ -27,13 +27,13 @@ class LoginScreen extends StatelessWidget {
               Text(
                 'Login',
                 textAlign: TextAlign.center,
-                style: TextStylesApp.textStyleSemi26,
+                style: TextStylesApp.textStyleSemi25,
               ),
               SizedBox(height: 15.h),
               Text(
                 'Enter your emails and password',
                 textAlign: TextAlign.center,
-                style: TextStylesApp.textStyleRegular16,
+                style: TextStylesApp.textStyleRegular15,
               ),
               SizedBox(height: 35.h),
               const WidgetTextFromField(),
@@ -46,7 +46,7 @@ class LoginScreen extends StatelessWidget {
                   },
                   child: Text(
                     'Forgot Password?',
-                    style: TextStylesApp.textStyleRegular14,
+                    style: TextStylesApp.textStyleRegular13,
                   ),
                 ),
               ),

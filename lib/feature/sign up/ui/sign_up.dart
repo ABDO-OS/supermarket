@@ -31,13 +31,13 @@ class SignUp extends StatelessWidget {
                 Text(
                   'Sign Up',
                   textAlign: TextAlign.center,
-                  style: TextStylesApp.textStyleSemi26,
+                  style: TextStylesApp.textStyleSemi25,
                 ),
                 SizedBox(height: 15.h),
                 Text(
                   'Enter your credentials to continue',
                   textAlign: TextAlign.center,
-                  style: TextStylesApp.textStyleRegular18,
+                  style: TextStylesApp.textStyleRegular17,
                 ),
                 SizedBox(height: 30.h),
                 const WidgetTextFromField(),
@@ -47,7 +47,7 @@ class SignUp extends StatelessWidget {
                 TextRich(
                   text1: 'By continuing you agree to our ',
                   text2: 'Terms of Service and Privacy Policy.',
-                  style1: TextStylesApp.textStyleRegular14
+                  style1: TextStylesApp.textStyleRegular13
                       .copyWith(color: ColorApp.secondary),
                 ),
                 SizedBox(

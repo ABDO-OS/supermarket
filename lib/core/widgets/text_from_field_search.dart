@@ -11,13 +11,13 @@ class TextFromFieldSearch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      style: TextStylesApp.textStyleRegular16.copyWith(color: Colors.black),
+      style: TextStylesApp.textStyleRegular15.copyWith(color: Colors.black),
       cursorColor: ColorApp.secondary,
       decoration: InputDecoration(
         labelText: 'Search',
-        labelStyle: TextStylesApp.textStyleRegular14,
+        labelStyle: TextStylesApp.textStyleRegular13,
         hintText: 'Search for fruits, vegetables and more',
-        hintStyle: TextStylesApp.textStyleRegular14
+        hintStyle: TextStylesApp.textStyleRegular13
             .copyWith(color: ColorApp.secondary),
         prefixIcon: Icon(
           Icons.search,

@@ -9,6 +9,7 @@ class CardItem extends StatelessWidget {
   final String? description;
   final String? price;
   final String? image;
+  final VoidCallback? onPressed;
 
   const CardItem({
     super.key,
@@ -16,6 +17,7 @@ class CardItem extends StatelessWidget {
     this.description,
     this.price,
     this.image,
+    this.onPressed,
   });
 
   @override
@@ -25,7 +27,7 @@ class CardItem extends StatelessWidget {
       width: 195.w,
       child: GestureDetector(
         onTap: () {
-          
+          onPressed!();
         },
         child: Card(
           elevation: 0,
@@ -54,7 +56,7 @@ class CardItem extends StatelessWidget {
                   child: Text(
                     'Organic Bananas',
                     overflow: TextOverflow.ellipsis,
-                    style: TextStylesApp.textStyleSemi16
+                    style: TextStylesApp.textStyleSemi15
                         .copyWith(color: ColorApp.primary),
                   ),
                 ),
@@ -65,7 +67,7 @@ class CardItem extends StatelessWidget {
                   child: Text(
                     '7pcs, Priceg',
                     overflow: TextOverflow.ellipsis,
-                    style: TextStylesApp.textStyleRegular14
+                    style: TextStylesApp.textStyleRegular13
                         .copyWith(color: ColorApp.secondary),
                   ),
                 ),
@@ -80,7 +82,7 @@ class CardItem extends StatelessWidget {
                       child: Text(
                         '\$4.99',
                         overflow: TextOverflow.ellipsis,
-                        style: TextStylesApp.textStyleSemi18.copyWith(
+                        style: TextStylesApp.textStyleSemi17.copyWith(
                           color: ColorApp.primary,
                         ),
                       ),

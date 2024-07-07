@@ -19,13 +19,13 @@ class CustomTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
-      style: TextStylesApp.textStyleRegular18,
+      style: TextStylesApp.textStyleRegular17,
       validator: validator,
       cursorColor: ColorApp.secondary,
       keyboardType: keyboardType,
       decoration: InputDecoration(
           labelText: labelText,
-          labelStyle: TextStylesApp.textStyleSemi16,
+          labelStyle: TextStylesApp.textStyleSemi15,
           suffixIcon: labelText == 'Password'
               ? IconButton(
                   onPressed: () {},
