@@ -28,21 +28,19 @@ class ColumnBackground extends StatelessWidget {
         Text(
           'Welcome \nto our store',
           textAlign: TextAlign.center,
-          style: TextStylesApp.textStyleRegular48,
+          style: TextStylesApp.textStyleRegular44,
         ),
         SizedBox(height: 10.h),
         Text(
           'Ger your groceries in as fast as one hour',
           textAlign: TextAlign.center,
-          style: TextStylesApp.textStyleRegular16
+          style: TextStylesApp.textStyleRegular15
               .copyWith(color: ColorApp.colorStarted),
         ),
         SizedBox(height: 40.h),
         ButtonApp(
           text: 'Get Started',
-          onPressed: () {
-            
-          },
+          onPressed: () {},
         ),
         SizedBox(height: 40.h),
       ],
