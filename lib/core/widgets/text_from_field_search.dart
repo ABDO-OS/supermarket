@@ -10,26 +10,31 @@ class TextFromFieldSearch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      style: TextStylesApp.textStyleRegular15.copyWith(color: Colors.black),
-      cursorColor: ColorApp.secondary,
-      decoration: InputDecoration(
-        labelText: 'Search',
-        labelStyle: TextStylesApp.textStyleRegular13,
-        hintText: 'Search for fruits, vegetables and more',
-        hintStyle: TextStylesApp.textStyleRegular13
-            .copyWith(color: ColorApp.secondary),
-        prefixIcon: Icon(
-          Icons.search,
-          color: ColorApp.colorIconSearch,
-        ),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15.r),
-          borderSide: BorderSide(color: ColorApp.secondary),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15.r),
-          borderSide: BorderSide(color: ColorApp.secondary),
+    return Container(
+      height: 40.h,
+      padding: EdgeInsets.symmetric(horizontal: 5.w),
+      decoration: BoxDecoration(
+        color: ColorApp.colorBorderSearch,
+        borderRadius: BorderRadius.circular(15.r),
+      ),
+      child: Center(
+        child: TextFormField(
+          textAlignVertical: TextAlignVertical.center,
+          style: TextStylesApp.textStyleRegular15.copyWith(color: Colors.black),
+          cursorColor: ColorApp.secondary,
+          decoration: InputDecoration(
+            // labelText: 'Search',
+            // labelStyle: TextStylesApp.textStyleRegular13,
+            hintText: 'Search for fruits, vegetables and more',
+            hintStyle: TextStylesApp.textStyleRegular13
+                .copyWith(color: ColorApp.secondary),
+            prefixIcon: Icon(
+              Icons.search,
+              color: ColorApp.colorIconSearch,
+            ),
+            focusedBorder: InputBorder.none,
+            enabledBorder: InputBorder.none,
+          ),
         ),
       ),
     );
