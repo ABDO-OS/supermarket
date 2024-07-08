@@ -17,8 +17,7 @@ class ButtonApp extends StatelessWidget {
     return ElevatedButton(
         onPressed: onPressed,
         style: ButtonStyle(
-          backgroundColor:
-              WidgetStateProperty.all<Color>(ColorApp.colorButton),
+          backgroundColor: WidgetStateProperty.all<Color>(ColorApp.colorButton),
           minimumSize: WidgetStateProperty.all<Size>(
             Size(double.infinity, 50.h),
           ),
@@ -32,7 +31,7 @@ class ButtonApp extends StatelessWidget {
         ),
         child: Text(
           text,
-          style: TextStylesApp.textStyleSemi18,
+          style: TextStylesApp.textStyleSemi17,
         ));
   }
 }

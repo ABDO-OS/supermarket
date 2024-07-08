@@ -14,7 +14,7 @@ class ForgetPassword extends StatelessWidget {
         onPressed: () {},
         child: Text(
           'Forgot Password?',
-          style: TextStylesApp.textStyleRegular14,
+          style: TextStylesApp.textStyleRegular13,
         ),
       ),
     );

@@ -65,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return PersistentBottomNavBarItem(
         icon: Icon(icon),
         title: (title),
-        textStyle: TextStylesApp.textStyleSemi11,
+        textStyle: TextStylesApp.textStyleSemi10,
         activeColorPrimary: ColorApp.colorButton,
         inactiveColorPrimary: ColorApp.primary);
   }

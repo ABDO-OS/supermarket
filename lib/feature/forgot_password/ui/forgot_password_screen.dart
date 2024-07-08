@@ -15,7 +15,7 @@ class ForgotPassword extends StatelessWidget {
         title: Text(
           'Forgot Password',
           style:
-              TextStylesApp.textStyleSemi20.copyWith(color: ColorApp.primary),
+              TextStylesApp.textStyleSemi19.copyWith(color: ColorApp.primary),
         ),
         backgroundColor: Colors.white,
       ),

@@ -21,7 +21,7 @@ class OrLogin extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 10.w),
           child: Text(
             'OR',
-            style: TextStylesApp.textStyleRegular14,
+            style: TextStylesApp.textStyleRegular13,
           ),
         ),
         Expanded(

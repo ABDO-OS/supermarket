@@ -14,7 +14,9 @@ class TextRich extends StatelessWidget {
     super.key,
     required this.text1,
     required this.text2,
-    this.onTap, this.style1, this.style2,
+    this.onTap,
+    this.style1,
+    this.style2,
   });
 
   @override
@@ -24,13 +26,14 @@ class TextRich extends StatelessWidget {
         children: [
           TextSpan(
             text: text1,
-            style: style1?? TextStylesApp.textStyleRegular14,
+            style: style1 ?? TextStylesApp.textStyleRegular13,
           ),
           TextSpan(
             text: text2,
             recognizer: TapGestureRecognizer()..onTap = onTap,
-            style: style2?? TextStylesApp.textStyleRegular14
-                .copyWith(color: ColorApp.colorButton),
+            style: style2 ??
+                TextStylesApp.textStyleRegular13
+                    .copyWith(color: ColorApp.colorButton),
           ),
         ],
       ),

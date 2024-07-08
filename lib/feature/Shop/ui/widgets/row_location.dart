@@ -15,7 +15,7 @@ class RowLocation extends StatelessWidget {
         const Icon(Icons.location_on),
         Text(
           'Egypt , Cairo',
-          style: TextStylesApp.textStyleSemi18
+          style: TextStylesApp.textStyleSemi17
               .copyWith(color: ColorApp.colorLocation),
         ),
       ],

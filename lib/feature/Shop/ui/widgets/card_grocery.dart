@@ -41,7 +41,7 @@ class CardGrocery extends StatelessWidget {
                         child: Center(
                           child: Text('Fresh Fruits',
                               overflow: TextOverflow.ellipsis,
-                              style: TextStylesApp.textStyleSemi20),
+                              style: TextStylesApp.textStyleSemi19),
                         ),
                       ),
                     ],

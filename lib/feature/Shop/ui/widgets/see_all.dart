@@ -7,7 +7,10 @@ class RowSeeAll extends StatelessWidget {
   final String text2;
   final Function() onPressed;
   const RowSeeAll({
-    super.key, required this.text1, required this.text2, required this.onPressed,
+    super.key,
+    required this.text1,
+    required this.text2,
+    required this.onPressed,
   });
 
   @override
@@ -17,13 +20,13 @@ class RowSeeAll extends StatelessWidget {
       children: [
         Text(
           text1,
-          style: TextStylesApp.textStyleSemi22,
+          style: TextStylesApp.textStyleSemi21,
         ),
         TextButton(
           onPressed: onPressed,
           child: Text(
             text2,
-            style: TextStylesApp.textStyleSemi16
+            style: TextStylesApp.textStyleSemi15
                 .copyWith(color: ColorApp.colorButton),
           ),
         ),
