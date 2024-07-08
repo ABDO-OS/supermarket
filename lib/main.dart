@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:supermarket/core/constants/go_router.dart';
+import 'package:supermarket/feature/get_started/ui/get_started.dart';
+import 'package:supermarket/feature/home/ui/home_screen.dart';
+import 'package:supermarket/feature/login/ui/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
