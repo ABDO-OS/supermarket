@@ -13,4 +13,5 @@ abstract class ColorApp {
   static Color colorImageDetails = const Color(0xFFF2F3F2);
   static Color colorBorderSearch = const Color(0xFFF1F2F2);
   static Color colorDotsPageView = const Color(0xFFB3B3B3);
+  static Color colorReview = const Color(0xFFF3603F);
 }
