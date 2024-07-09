@@ -6,6 +6,7 @@ import 'package:supermarket/feature/Shop/product_details/ui/widgets/app_bar_deta
 import 'package:supermarket/feature/Shop/product_details/ui/widgets/container_image_product.dart';
 import 'package:supermarket/feature/Shop/product_details/ui/widgets/custom_expansion_tile.dart';
 import 'package:supermarket/feature/Shop/product_details/ui/widgets/nutritions.dart';
+import 'package:supermarket/feature/Shop/product_details/ui/widgets/review.dart';
 import 'package:supermarket/feature/Shop/product_details/ui/widgets/row_name_product.dart';
 import 'package:supermarket/feature/Shop/product_details/ui/widgets/row_quantity_and_price.dart';
 
@@ -44,8 +45,8 @@ class ProductDetails extends StatelessWidget {
                     height: 10.h,
                   ),
                   const CustomExpansionTile(),
-                 
                    productNutritions(),
+                   Review(),
                   SizedBox(
                     height: 10.h,
                   ),

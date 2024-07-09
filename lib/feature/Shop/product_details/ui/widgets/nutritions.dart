@@ -33,7 +33,7 @@ class productNutritions extends StatelessWidget {
             ),
           ],
         ),
-        const DividerExpansionTile(),
+        // const DividerExpansionTile(),
       ],
     );
   }
