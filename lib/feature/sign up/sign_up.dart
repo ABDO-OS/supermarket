@@ -25,13 +25,13 @@ class SignUp extends StatelessWidget {
                 Text(
                   'Sign Up',
                   textAlign: TextAlign.center,
-                  style: TextStylesApp.textStyleSemi26,
+                  style: TextStylesApp.textStyleSemi25,
                 ),
                 SizedBox(height: 15.h),
                 Text(
                   'Enter your credentials to continue',
                   textAlign: TextAlign.center,
-                  style: TextStylesApp.textStyleRegular18,
+                  style: TextStylesApp.textStyleRegular15,
                 ),
                 SizedBox(height: 20),
                 _WidgetTextFromField(),

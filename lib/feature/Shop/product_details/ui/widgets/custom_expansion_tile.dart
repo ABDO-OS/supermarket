@@ -33,7 +33,7 @@ class CustomExpansionTile extends StatelessWidget {
                 ),
               ),
             ]),
-        const DividerExpansionTile(),
+        // const DividerExpansionTile(),
       ],
     );
   }
