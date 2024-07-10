@@ -47,7 +47,7 @@ class ProductDetails extends StatelessWidget {
                     ),
                     const CustomExpansionTile(),
                     const ProductNutritionWidget(),
-                    Review(),
+                    const Review(),
                     SizedBox(
                       height: 10.h,
                     ),
