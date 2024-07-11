@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:supermarket/core/theme/colors.dart';
 import 'package:supermarket/core/theme/styles.dart';
 import 'package:supermarket/feature/Shop/product_details/ui/widgets/custom_expansion_tile.dart';
 
-class productNutritions extends StatelessWidget {
+class ProductNutritionWidget extends StatelessWidget {
+  const ProductNutritionWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -19,11 +20,11 @@ class productNutritions extends StatelessWidget {
           expandedAlignment: Alignment.centerLeft,
           tilePadding: EdgeInsets.zero,
           childrenPadding: EdgeInsets.all(4.r),
-          title: Text('Nutritions',
+          title: Text('Nutrition',
               style: TextStylesApp.textStyleRegular15.copyWith(
                 color: ColorApp.primary,
               )),
-          children: [
+          children: const [
             Lines(
               line: [
                 '100 kg',
@@ -55,8 +56,8 @@ class Lines extends StatelessWidget {
   List<Widget> buildText() {
     return line.map((line) {
       return Container(
-        margin: EdgeInsets.symmetric(vertical: 5),
-        padding: EdgeInsets.all(10),
+        margin: const EdgeInsets.symmetric(vertical: 5),
+        padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
           color: Colors.grey[300],
           borderRadius: BorderRadius.circular(8),

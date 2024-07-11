@@ -18,51 +18,47 @@ class ProductDetails extends StatelessWidget {
     return Scaffold(
       appBar: const AppBarDetails(),
       body: ListView(
-        children: [ Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            const ContainerImageProduct(),
-            SizedBox(
-              height: 15.h,
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.r),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  const RowNameProduct(),
-                  Text(
-                    '1kg, Price',
-                    style: TextStylesApp.textStyleRegular15,
-                  ),
-                  SizedBox(
-                    height: 15.h,
-                  ),
-                  const RowQuantityAndPrice(),
-                  SizedBox(
-                    height: 10.h,
-                  ),
-                  const CustomExpansionTile(),
-                   productNutritions(),
-                   Review(),
-                  SizedBox(
-                    height: 10.h,
-                  ),
-                  ButtonApp(text: 'Add To Basket', onPressed: () {}),
-                ],
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              const ContainerImageProduct(),
+              SizedBox(
+                height: 15.h,
               ),
-            ),
-          ],
-        ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.r),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const RowNameProduct(),
+                    Text(
+                      '1kg, Price',
+                      style: TextStylesApp.textStyleRegular15,
+                    ),
+                    SizedBox(
+                      height: 15.h,
+                    ),
+                    const RowQuantityAndPrice(),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    const CustomExpansionTile(),
+                    const ProductNutritionWidget(),
+                    const Review(),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    ButtonApp(text: 'Add To Basket', onPressed: () {}),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
   }
 }
-
-
-
-
-

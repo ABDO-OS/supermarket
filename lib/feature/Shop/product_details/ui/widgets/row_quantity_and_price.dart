@@ -10,10 +10,15 @@ class RowQuantityAndPrice extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int quantity = 1;
     return Row(
       children: [
         InkWell(
-          onTap: () {},
+          onTap: () {
+            if (quantity > 1) {
+              quantity--;
+            }
+          },
           child: Icon(
             Icons.remove,
             color: ColorApp.secondary,
@@ -33,7 +38,7 @@ class RowQuantityAndPrice extends StatelessWidget {
           ),
           child: Center(
             child: Text(
-              '1',
+              '$quantity',
               style: TextStylesApp.textStyleRegular17,
             ),
           ),
@@ -42,7 +47,11 @@ class RowQuantityAndPrice extends StatelessWidget {
           width: 10.w,
         ),
         InkWell(
-          onTap: () {},
+          onTap: () {
+            quantity++; 
+
+            
+          },
           child: Icon(
             Icons.add_outlined,
             color: ColorApp.colorButton,
