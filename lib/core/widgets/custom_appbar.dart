@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:supermarket/core/theme/colors.dart';
+import 'package:supermarket/core/theme/styles.dart';
 
-class AppBarDetails extends StatelessWidget implements PreferredSizeWidget {
-  const AppBarDetails({
+class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
+  final IconData? icon;
+  final String? title;
+  final Color? backgroundColor;
+  const CustomAppbar({
     super.key,
+    this.icon,
+    this.title,
+    this.backgroundColor,
   });
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
@@ -11,7 +18,16 @@ class AppBarDetails extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: ColorApp.colorImageDetails,
+      title: title != null
+          ? Center(
+              child: Text(
+                title!,
+                style: TextStylesApp.textStyleSemi19
+                    .copyWith(color: ColorApp.primary),
+              ),
+            )
+          : null,
+      backgroundColor: backgroundColor ?? ColorApp.colorImageDetails,
       leading: IconButton(
         onPressed: () {
           Navigator.pop(context);
@@ -25,7 +41,7 @@ class AppBarDetails extends StatelessWidget implements PreferredSizeWidget {
         IconButton(
           onPressed: () {},
           icon: Icon(
-            Icons.file_upload_outlined,
+            icon,
             color: ColorApp.primary,
           ),
         ),

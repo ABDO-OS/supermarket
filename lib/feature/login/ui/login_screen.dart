@@ -10,8 +10,6 @@ import 'package:supermarket/core/widgets/text_rich.dart';
 import 'package:supermarket/feature/login/ui/widgets/or_login.dart';
 import 'package:supermarket/feature/login/ui/widgets/widget_text_from_field.dart';
 
-import '../../sign up/sign_up.dart';
-// import 'package:supermarket/feature/sign%20up/sign_up.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});

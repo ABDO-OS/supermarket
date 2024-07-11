@@ -44,6 +44,13 @@ abstract class TextStylesApp {
     fontFamily: Fonts.gilroy,
     fontWeight: FontWeight.w400,
   );
+    static TextStyle textStyleSemi13 = TextStyle(
+    color: ColorApp.primary,
+    fontSize: 13.sp,
+    fontFamily: Fonts.gilroy,
+    fontWeight: FontWeight.w600,
+    height: 0,
+  );
   // Style for text with 44sp size
   static TextStyle textStyleRegular44 = TextStyle(
     color: Colors.white,
@@ -74,5 +81,13 @@ abstract class TextStylesApp {
     fontFamily: Fonts.gilroy,
     fontWeight: FontWeight.w600,
     height: 0,
+  );
+
+  // Style for text with 11sp size
+    static TextStyle textStyleRegular11 = TextStyle(
+    color: ColorApp.primary,
+    fontSize: 11.sp,
+    fontFamily: Fonts.gilroy,
+    fontWeight: FontWeight.w400,
   );
 }

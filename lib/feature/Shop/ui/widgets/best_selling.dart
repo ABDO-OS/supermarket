@@ -25,9 +25,13 @@ class BestSelling extends StatelessWidget {
           height: 240.h,
           child: ListView.separated(
               scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) => const CardItem(
-                    image: Assets.imagesBanana,
-                  ),
+              itemBuilder: (context, index) => SizedBox(
+                      height: 240.h,
+                    width: 195.w,
+                child: const CardItem(
+                      image: Assets.imagesBanana,
+                    ),
+              ),
               separatorBuilder: (context, index) => SizedBox(width: 5.w),
               itemCount: 15),
         ),

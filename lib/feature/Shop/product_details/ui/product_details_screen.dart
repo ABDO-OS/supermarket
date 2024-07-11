@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:supermarket/core/theme/styles.dart';
 import 'package:supermarket/core/widgets/button_app.dart';
-import 'package:supermarket/feature/Shop/product_details/ui/widgets/app_bar_details.dart';
+import 'package:supermarket/core/widgets/custom_appbar.dart';
 import 'package:supermarket/feature/Shop/product_details/ui/widgets/container_image_product.dart';
 import 'package:supermarket/feature/Shop/product_details/ui/widgets/custom_expansion_tile.dart';
 import 'package:supermarket/feature/Shop/product_details/ui/widgets/nutritions.dart';
@@ -16,7 +16,9 @@ class ProductDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarDetails(),
+      appBar: const CustomAppbar(
+        icon: Icons.file_upload_outlined,
+      ),
       body: ListView(
         children: [
           Column(
