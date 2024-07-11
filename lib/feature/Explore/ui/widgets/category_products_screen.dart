@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-import 'package:go_router/go_router.dart';
-import 'package:supermarket/core/constants/assets.dart';
-import 'package:supermarket/core/constants/go_router.dart';
 import 'package:supermarket/core/widgets/custom_appbar.dart';
 import 'package:supermarket/feature/Explore/ui/widgets/animation_grid_view.dart';
-import 'package:supermarket/feature/Shop/ui/widgets/card_item.dart';
 
 class CategoryProductsScreen extends StatelessWidget {
   const CategoryProductsScreen({super.key});
