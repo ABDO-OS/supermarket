@@ -53,19 +53,21 @@ class Lines extends StatelessWidget {
   }
 
   List<Widget> buildText() {
-    return line.map((line){
+    return line.map((line) {
       return Container(
         margin: EdgeInsets.symmetric(vertical: 5),
         padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
           color: Colors.grey[300],
-          borderRadius: BorderRadius.circular(8), 
+          borderRadius: BorderRadius.circular(8),
         ),
-        child: Text(line, style: TextStylesApp.textStyleRegular13.copyWith(
-                  color: ColorApp.secondary,
-                ),),
+        child: Text(
+          line,
+          style: TextStylesApp.textStyleRegular13.copyWith(
+            color: ColorApp.secondary,
+          ),
+        ),
       );
-
     }).toList();
   }
 }
