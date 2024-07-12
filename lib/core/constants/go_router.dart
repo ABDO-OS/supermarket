@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:supermarket/feature/Explore/ui/widgets/category_products_screen.dart';
 import 'package:supermarket/feature/Shop/product_details/ui/product_details_screen.dart';
 import 'package:supermarket/feature/forgot_password/ui/forgot_password_screen.dart';
 import 'package:supermarket/feature/home/ui/home_screen.dart';
@@ -11,6 +12,7 @@ class Routers {
   static const String home = '/home';
   static const String forgotPassword = '/forgotPassword';
   static const String productDetails = '/productDetails';
+  static const String categoryProductsScreen = '/CategoryProductsScreen';
 
   static final router = GoRouter(routes: [
     GoRoute(
@@ -28,6 +30,10 @@ class Routers {
     GoRoute(
       path: forgotPassword,
       builder: (context, state) => const ForgotPassword(),
+    ),
+    GoRoute(
+      path: categoryProductsScreen,
+      builder: (context, state) => const CategoryProductsScreen(),
     ),
     GoRoute(
         path: productDetails,

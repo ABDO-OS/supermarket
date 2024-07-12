@@ -27,11 +27,15 @@ class ExclusiveOffer extends StatelessWidget {
           height: 240.h,
           child: ListView.separated(
               scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) => CardItem(
-                    onPressed: () {
-                      GoRouter.of(context).push(Routers.productDetails);
-                    },
-                    image: Assets.imagesPepper,
+              itemBuilder: (context, index) => SizedBox(
+                    height: 240.h,
+                    width: 195.w,
+                    child: CardItem(
+                      onPressed: () {
+                        GoRouter.of(context).push(Routers.productDetails);
+                      },
+                      image: Assets.imagesPepper,
+                    ),
                   ),
               separatorBuilder: (context, index) => SizedBox(width: 5.w),
               itemCount: 15),

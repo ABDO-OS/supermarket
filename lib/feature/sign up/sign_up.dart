@@ -10,7 +10,7 @@ class SignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 238, 238, 238),
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(25.0),
@@ -19,7 +19,7 @@ class SignUp extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Center(child: SvgPicture.asset(Assets.imagesCarrot)),
-                SizedBox(
+                const SizedBox(
                   height: 100,
                 ),
                 Text(
@@ -33,8 +33,8 @@ class SignUp extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStylesApp.textStyleRegular15,
                 ),
-                SizedBox(height: 20),
-                _WidgetTextFromField(),
+                const SizedBox(height: 20),
+                const _WidgetTextFromField(),
               ],
             ),
           ),
@@ -45,7 +45,7 @@ class SignUp extends StatelessWidget {
 }
 
 class _WidgetTextFromField extends StatefulWidget {
-  const _WidgetTextFromField({super.key});
+  const _WidgetTextFromField();
 
   @override
   State<_WidgetTextFromField> createState() => _WidgetTextFromFieldState();
@@ -59,24 +59,22 @@ class _WidgetTextFromFieldState extends State<_WidgetTextFromField> {
   @override
   Widget build(BuildContext context) {
     return Column(
-     
-        children: [
-          CustomTextFormField(
-            controller: usernameController,
-            labelText: 'Username',
-          ),
-          SizedBox(height: 10.h),
-          CustomTextFormField(
-            controller: emailController,
-            labelText: 'Email',
-          ),
-          SizedBox(height: 10.h),
-          CustomTextFormField(
-            controller: passwordController,
-            labelText: 'Password',
-          ),
-        ],
-      );
-   
+      children: [
+        CustomTextFormField(
+          controller: usernameController,
+          labelText: 'Username',
+        ),
+        SizedBox(height: 10.h),
+        CustomTextFormField(
+          controller: emailController,
+          labelText: 'Email',
+        ),
+        SizedBox(height: 10.h),
+        CustomTextFormField(
+          controller: passwordController,
+          labelText: 'Password',
+        ),
+      ],
+    );
   }
 }
