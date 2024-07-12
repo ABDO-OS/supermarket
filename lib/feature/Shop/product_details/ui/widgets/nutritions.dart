@@ -24,7 +24,21 @@ class ProductNutritionWidget extends StatelessWidget {
               style: TextStylesApp.textStyleRegular15.copyWith(
                 color: ColorApp.primary,
               )),
-          children: const [
+          children: [
+            Container(
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.all(Radius.circular(8)),
+                ),
+              ),
+        //        Text(
+        //   'hi',
+        //   style: TextStylesApp.textStyleRegular13.copyWith(
+        //     color: ColorApp.secondary,
+        //   ),
+        // ),
+            ),
             Lines(
               line: [
                 '100 kg',
@@ -34,7 +48,7 @@ class ProductNutritionWidget extends StatelessWidget {
             ),
           ],
         ),
-        // const DividerExpansionTile(),
+        const DividerExpansionTile(),
       ],
     );
   }

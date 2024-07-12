@@ -17,8 +17,9 @@ class Item extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      
       leading: Icon(icon, color: ColorApp.primary),
-      title: Text(text, style: TextStylesApp.textStyleRegular15),
+      title: Text(text, style: TextStylesApp.textStyleRegular17),
       onTap: onTap,
     );
   }

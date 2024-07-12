@@ -48,6 +48,7 @@ class DividerExpansionTile extends StatelessWidget {
     return Divider(
       color: ColorApp.colorBorder,
       thickness: 1,
+      // endIndent: 20,
     );
   }
 }

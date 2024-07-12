@@ -10,26 +10,38 @@ class Review extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return (Column(
+    return (
+      Row(
       children: [
         const DividerExpansionTile(),
-        ExpansionTile(
-            shape: const RoundedRectangleBorder(
-              side: BorderSide(style: BorderStyle.none),
-            ),
-            iconColor: ColorApp.primary,
-            expandedAlignment: Alignment.centerLeft,
-            tilePadding: EdgeInsets.zero,
-            childrenPadding: EdgeInsets.all(4.r),
-            title: Text('Review',
+       Text('Review',
                 style: TextStylesApp.textStyleRegular15.copyWith(
                   color: ColorApp.primary,
                 )),
-            children: const [
-              ReviewRatingBar(),
-            ]),
-        // const DividerExpansionTile(),
+                SizedBox(width:60),
+                ReviewRatingBar(),
+                // const DividerExpansionTile(),
+                //                 const DividerExpansionTile(),
+
+        // ExpansionTile(
+        //     shape: const RoundedRectangleBorder(
+        //       side: BorderSide(style: BorderStyle.none),
+        //     ),
+        //     iconColor: ColorApp.primary,
+        //     expandedAlignment: Alignment.centerLeft,
+        //     tilePadding: EdgeInsets.zero,
+        //     childrenPadding: EdgeInsets.all(4.r),
+        //     title: Text('Review',
+        //         style: TextStylesApp.textStyleRegular15.copyWith(
+        //           color: ColorApp.primary,
+        //         )),
+        //     children: const [
+        //       ReviewRatingBar(),
+        //     ]
+        //     ),
+        
       ],
-    ));
+    )
+    );
   }
 }

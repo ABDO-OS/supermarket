@@ -47,9 +47,16 @@ class ProductDetails extends StatelessWidget {
                     ),
                     const CustomExpansionTile(),
                     const ProductNutritionWidget(),
+                    SizedBox(
+                      height: 10.h,
+                    ),
                     const Review(),
                     SizedBox(
                       height: 10.h,
+                    ),
+                    const DividerExpansionTile(),
+                    SizedBox(
+                      height: 35.h,
                     ),
                     ButtonApp(text: 'Add To Basket', onPressed: () {}),
                   ],
