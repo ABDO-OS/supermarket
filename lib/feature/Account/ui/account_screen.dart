@@ -7,8 +7,32 @@ import 'package:supermarket/core/widgets/account_items.dart';
 import 'package:supermarket/core/widgets/button_log_out.dart';
 import 'package:supermarket/feature/Shop/product_details/ui/widgets/custom_expansion_tile.dart';
 
-class AccountScreen extends StatelessWidget {
-  const AccountScreen({super.key});
+class AccountScreen extends StatefulWidget {
+  const AccountScreen({Key? key}) : super(key: key);
+
+  @override
+  AccountScreenState createState() => AccountScreenState();
+}
+
+class AccountScreenState extends State<AccountScreen> {
+  String name = "User";
+  bool isEditing = false;
+  TextEditingController controller = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    controller.text = name;
+  }
+
+  void toggleEdit() {
+    setState(() {
+      if (isEditing) {
+        name = controller.text;
+      }
+      isEditing = !isEditing;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,31 +54,48 @@ class AccountScreen extends StatelessWidget {
                         fit: BoxFit.cover,
                       ),
                     ),
-                    SizedBox(width: 20), // Space between image and text
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Abdo Osama',
-                          style: TextStylesApp.textStyleSemi17.copyWith(
-                            color: ColorApp.primary,
+                    SizedBox(width: 20), 
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Expanded(
+                                child: isEditing
+                                    ? TextField(
+                                        controller: controller,
+                                        decoration: InputDecoration(
+                                          hintText: 'enteer your name',
+                                        ),
+                                      )
+                                    : Text(
+                                        name,
+                                        style: TextStylesApp.textStyleSemi17.copyWith(
+                                          color: ColorApp.primary,
+                                        ),
+                                      ),
+                              ),
+                              IconButton(
+                                icon: Icon(isEditing ? Icons.check : Icons.edit,color:ColorApp.colorButton),
+                                onPressed: toggleEdit,
+                              ),
+                            ],
                           ),
-                        ),
-                        Text(
-                          'abdalrhmanosama135@gmail.com',
-                          style: TextStylesApp.textStyleRegular13.copyWith(
-                            color: ColorApp.secondary,
+                          Text(
+                            'abdalrhmanosama135@gmail.com',
+                            style: TextStylesApp.textStyleRegular13.copyWith(
+                              color: ColorApp.secondary,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ],
                 ),
               ),
-          
               SizedBox(height: 30),
               const SmallDivider(),
-          
               Item(
                 icon: Icons.shopping_bag_outlined,
                 text: 'Orders',
@@ -103,10 +144,7 @@ class AccountScreen extends StatelessWidget {
                 onTap: () {},
               ),
               const SmallDivider(),
-          
-              // Spacer(),
               SizedBox(height: 30),
-          
               ButtonLogOut(
                 text: 'Log Out',
                 onPressed: () {},
