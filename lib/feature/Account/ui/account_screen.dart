@@ -54,7 +54,7 @@ class AccountScreenState extends State<AccountScreen> {
                         fit: BoxFit.cover,
                       ),
                     ),
-                    SizedBox(width: 20), 
+                    SizedBox(width: 20),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,13 +71,15 @@ class AccountScreenState extends State<AccountScreen> {
                                       )
                                     : Text(
                                         name,
-                                        style: TextStylesApp.textStyleSemi17.copyWith(
+                                        style: TextStylesApp.textStyleSemi17
+                                            .copyWith(
                                           color: ColorApp.primary,
                                         ),
                                       ),
                               ),
                               IconButton(
-                                icon: Icon(isEditing ? Icons.check : Icons.edit,color:ColorApp.colorButton),
+                                icon: Icon(isEditing ? Icons.check : Icons.edit,
+                                    color: ColorApp.colorButton),
                                 onPressed: toggleEdit,
                               ),
                             ],
@@ -149,6 +151,7 @@ class AccountScreenState extends State<AccountScreen> {
                 text: 'Log Out',
                 onPressed: () {},
               ),
+              SizedBox(height: 20),
             ],
           ),
         ),

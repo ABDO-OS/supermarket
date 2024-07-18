@@ -19,7 +19,7 @@ class ButtonApp extends StatelessWidget {
         style: ButtonStyle(
           backgroundColor: WidgetStateProperty.all<Color>(ColorApp.colorButton),
           minimumSize: WidgetStateProperty.all<Size>(
-            Size(double.infinity, 50.h),
+            Size(double.infinity, 50.h),       
           ),
           shape: WidgetStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
